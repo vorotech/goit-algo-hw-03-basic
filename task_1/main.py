@@ -58,7 +58,7 @@ def main():
         print(f"Source {src_dir} does not exist or is not a directory.")
         return
 
-    if not dst_dir.is_dir():
+    if dst_dir.exists() and not dst_dir.is_dir():
         print(f"Destination {dst_dir} is not a directory.")
         return
 
